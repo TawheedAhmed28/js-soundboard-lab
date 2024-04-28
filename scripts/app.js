@@ -49,7 +49,7 @@ const play = (event) => {
 
 const playRandom = () => {
     let randomIndex = Math.floor(Math.random() * allButtons.length)
-    console.log(allButtons[randomIndex].id)
+    // console.log(allButtons[randomIndex].id)
     audio.src = "./sounds/" + allButtons[randomIndex].id + ".wav"
     audio.play()
 }
