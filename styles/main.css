@@ -47,4 +47,5 @@ body {
 #randomizer:hover {
   background-color: rgba(49, 233, 202, 0.582);
   color: rgb(43, 7, 128);
+  font-weight: bold;
 }
