@@ -1,7 +1,9 @@
 body {
   max-width: 500px;
   margin: 0 auto;
-  background-color: #fafafa;
+  background-image: url(../pics/daft-punk-bg.jpg);
+  background-position: center;
+  background-size: 165%;
   font-family: 'Exo 2', sans-serif;
   display: flex;
   justify-content: center;
@@ -11,11 +13,12 @@ body {
 }
 
 #player div {
+  background: linear-gradient(rgba(6, 16, 160, 0.589), rgba(133, 2, 255, 0.705) ) ;
   display: inline-block;
   width: 111px;
   height: 111px;
   line-height: 111px;
-  color: #ea422c;
+  color: #0dc0a2;
   margin: 4px 2px;
   text-decoration: none;
   font-size: 1.2em;
@@ -27,18 +30,21 @@ body {
 
 #player div:hover {
   background-color: black;
-  color: white;
+  color: #1ae4ff;
+  font-weight: bold; 
 }
 
 #randomizer {
   margin-top: 30px;
   padding: 20px;
-  background-color: rgb(204, 204, 204);
+
+  background-color: rgb(43, 7, 128);
+  color: rgba(49, 233, 202, 0.582);
   border: 2px solid black;
   font-family: 'Exo 2', sans-serif;
 }
 
 #randomizer:hover {
-  background-color: black;
-  color: white;
+  background-color: rgba(49, 233, 202, 0.582);
+  color: rgb(43, 7, 128);
 }
