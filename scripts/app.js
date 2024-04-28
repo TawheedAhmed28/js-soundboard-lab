@@ -1,7 +1,7 @@
 
 /*-------------------------------- Constants --------------------------------*/
 
-
+// const randomIndex = Math.floor(Math.random() * allButtons.length)
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -28,13 +28,15 @@ const afterButton = document.querySelector("#after")
 const workIsButton = document.querySelector("#work_is")
 const overButton = document.querySelector("#over")
 
+
 const allButtons = [
     workItButton, makeItButton, doItButton, makesUsButton, harderButton, betterButton, fasterButton,
     strongerButton, moreThanButton, hourButton, ourButton, neverButton, everButton, afterButton,
     workIsButton, overButton
 ]
 
-
+const randomButton = document.querySelector("#randomizer")
+// console.log("./sounds/" + allButtons[randomIndex].id + ".wav")
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -45,14 +47,26 @@ const play = (event) => {
     }
 }
 
+const playRandom = () => {
+    let randomIndex = Math.floor(Math.random() * allButtons.length)
+    console.log(allButtons[randomIndex].id)
+    audio.src = "./sounds/" + allButtons[randomIndex].id + ".wav"
+    audio.play()
+}
+/* playRandom() randomises the ID on website launch, but then repeats the same sound eg. the page
+randomly assigns sound "never" to randomButton, but then every time randomButton is clicked the sound is
+always "never". It should be random for every click.
+
+Fixed: randomIndex was outside the function, which caused it to never be re-assigned. It now
+re-assigns each time the function is called. */
 
 /*----------------------------- Event Listeners -----------------------------*/
 
 for (const button of allButtons) {   
-    addEventListener("click", play)
+    button.addEventListener("click", play)
 }
 
-
+randomButton.addEventListener("click", playRandom)
 
 
 /*                                                                            */
